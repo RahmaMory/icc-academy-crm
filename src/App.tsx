@@ -34,6 +34,7 @@ import StudentPrivateChat from "./pages/student/StudentPrivateChat";
 import { ChatProvider } from "./context/ChatContext";
 import InstructorPrivateChat from "./pages/instructor/InstructorPrivateChat";
 import { ClassChatProvider } from "./context/ClassChatContext";
+import NotFound from "./pages/NotFound";
 export default function App() {
   return (
     <ClassChatProvider>
@@ -112,7 +113,7 @@ export default function App() {
   element={<ManagerInstructorStudents />}
 />
 </Route>
-
+<Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     </ChatProvider>
